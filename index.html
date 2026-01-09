@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Paulina Abelló · Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio bilingüe de Paulina Abelló: proyectos de diseño editorial, packaging, 3D y UX/UI."
+    />
+    <meta name="theme-color" content="#0b1220" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Paulina Abelló · Portfolio" />
+    <meta
+      property="og:description"
+      content="Proyectos de diseño editorial, packaging, 3D y UX/UI. Disponible para trabajar."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/images/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Paulina Abelló · Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Proyectos de diseño editorial, packaging, 3D y UX/UI."
+    />
+    <meta name="twitter:image" content="./assets/images/og-image.png" />
+
+    <link rel="icon" href="./assets/images/og-image.png" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+   <script>
+  (function () {
+    try {
+      const t = localStorage.getItem("theme");
+      const l = localStorage.getItem("lang");
+      if (t) document.documentElement.dataset.theme = t;
+      if (l) document.documentElement.dataset.lang = l;
+    } catch {}
+    // ✅ NO QUITAR "no-js" aquí
+  })();
+</script>
+
+
+    <!-- (Opcional “mini nivel 2”): GSAP por CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- Scroll progress -->
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Back to top floating button -->
+    <button class="backtop-fab" id="backtop-fab" type="button" aria-label="Back to top">
+      ↑
+    </button>
+
+    <a class="skip-link" href="#main">Skip to content / Saltar al contenido</a>
+
+    <header class="site-header" data-elevate>
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Paulina Abelló</span>
+        </a>
+
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Language switch">
+            <button class="chip" type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+            <button class="chip" type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label" data-i18n="theme">Theme</span>
+          </button>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+            <span class="sr-only">Open menu</span>
+            <span class="burger" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="kicker reveal" data-i18n="kicker">Creative Portfolio · 2025</p>
+
+            <h1 class="hero-title reveal">
+              <span data-i18n="hero_hi">Hi, I’m</span>
+              <span class="accent">Paulina Abelló</span>.
+            </h1>
+
+            <p class="hero-lead reveal" data-i18n="hero_lead">
+              Graphic design student passionate about visual challenges through creative solutions.
+              I’m always evolving—blending theory with hands-on practice to build a versatile style.
+            </p>
+
+            <p class="hero-statement reveal" data-i18n="hero_statement">
+              Visual systems, editorial rhythm, digital experiences.
+            </p>
+
+            <div class="hero-badges reveal" aria-label="Quick info">
+              <span class="pill" data-i18n="badge_location">Based in Madrid, Spain</span>
+              <span class="pill" data-i18n="badge_available">Available for work</span>
+              <span class="pill">Editorial · Packaging · 3D · UI</span>
+            </div>
+
+            <div class="hero-cta reveal">
+              <a class="btn primary" href="#projects" data-i18n="cta_projects">View projects</a>
+              <a class="btn ghost" href="#contact" data-i18n="cta_contact">Contact</a>
+            </div>
+          </div>
+
+          <aside class="hero-card reveal" aria-label="Featured projects">
+            <div class="featured-media">
+              <img
+                src="./assets/images/featured/featured.jpg"
+                alt="Imagen representativa de proyectos destacados"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="featured">
+              <h3 data-i18n="featured">Selección de proyectos</h3>
+              <p class="featured-text" data-i18n="featured_text">
+                Proyectos centrados en identidad visual, diseño editorial y experiencias digitales,
+                desarrollados con un enfoque conceptual y estético.
+              </p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="line"></span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title reveal" data-i18n="about_title">About me</h2>
+            <p class="section-subtitle reveal" data-i18n="about_subtitle">
+              Minimalist, organic and naturalistic—focused on calm, refined visual balance.
+            </p>
+          </header>
+
+          <div class="about-top reveal">
+            <div class="about-photo">
+              <img src="./assets/images/me.jpg" alt="Foto de Paulina Abelló" loading="lazy" />
+            </div>
+
+            <div class="about-actions">
+              <a class="btn primary" href="./assets/files/Paulina_Abello_CV.pdf" download>
+                <span data-i18n="download_cv">Download CV</span>
+              </a>
+
+              <div class="skillbars" aria-label="Skill levels">
+                <div class="skillbar">
+                  <span class="skillbar__label">Photoshop</span>
+                  <span class="skillbar__meter" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                    <span style="width:85%"></span>
+                  </span>
+                </div>
+
+                <div class="skillbar">
+                  <span class="skillbar__label">Illustrator</span>
+                  <span class="skillbar__meter" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                    <span style="width:80%"></span>
+                  </span>
+                </div>
+
+                <div class="skillbar">
+                  <span class="skillbar__label">InDesign</span>
+                  <span class="skillbar__meter" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                    <span style="width:78%"></span>
+                  </span>
+                </div>
+
+                <div class="skillbar">
+                  <span class="skillbar__label">Figma</span>
+                  <span class="skillbar__meter" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <span style="width:75%"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-grid">
+            <article class="card reveal">
+              <h3 data-i18n="about_who_title">Who I am</h3>
+              <p data-i18n="about_who_body">
+                I’m Paulina Abelló, originally from Maracaibo, Venezuela, currently living and studying in Madrid.
+                I’m in my 4th year of Multimedia and Graphic Design at UDIT.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <h3 data-i18n="about_style_title">Style</h3>
+              <p data-i18n="about_style_body">
+                My style is minimalist, organic, and naturalistic. I enjoy shapes and colors that evoke tranquility and beauty,
+                aiming for simplicity and a refined artistic expression.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <h3 data-i18n="about_focus_title">Focus</h3>
+              <p data-i18n="about_focus_body">
+                In every project, I strive to create visual balance that reflects what’s essential and aesthetic—tailored to each project’s needs.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <h3 data-i18n="about_edu_title">Education</h3>
+              <p>
+                <strong>UDIT</strong> — Universidad de Diseño, Innovación y Tecnología<br />
+                <span data-i18n="about_edu_body">2022 – Present · 4th year</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title reveal" data-i18n="projects_title">Projects</h2>
+            <p class="section-subtitle reveal" data-i18n="projects_subtitle">
+              Selected work — click a project to view details.
+            </p>
+          </header>
+
+          <div class="filters reveal" role="group" aria-label="Project filters">
+            <button class="chip is-active" type="button" data-filter="all" data-i18n="filter_all">All</button>
+            <button class="chip" type="button" data-filter="editorial" data-i18n="filter_editorial">Editorial</button>
+            <button class="chip" type="button" data-filter="packaging" data-i18n="filter_packaging">Packaging</button>
+            <button class="chip" type="button" data-filter="3d">3D</button>
+            <button class="chip" type="button" data-filter="ui" data-i18n="filter_ui">UI / App</button>
+          </div>
+
+          <div class="grid projects-grid" id="projects-grid">
+            <!-- P01 -->
+            <article class="project-card reveal" data-tags="editorial">
+              <button class="project-btn" type="button" data-project="p01">
+                <img class="project-img" src="./assets/images/projects/p01/cover.jpg" alt="Project 01 — Madrid Campaign" loading="lazy" />
+                <div class="project-body">
+                  <h3 class="project-title">Project 01 — Editorial Design</h3>
+                  <p class="project-desc" data-i18n="p01_teaser">
+                    Graphic campaign promoting Madrid using Puerta de Alcalá as the main symbol.
+                  </p>
+                  <ul class="project-tags">
+                    <li>InDesign</li><li>Photoshop</li><li>Campaign</li>
+                  </ul>
+                </div>
+              </button>
+            </article>
+
+            <!-- P02 -->
+            <article class="project-card reveal" data-tags="packaging">
+              <button class="project-btn" type="button" data-project="p02">
+                <img class="project-img" src="./assets/images/projects/p02/cover.jpg" alt="Project 02 — MOLA Packaging" loading="lazy" />
+                <div class="project-body">
+                  <h3 class="project-title">Project 02 — Packaging</h3>
+                  <p class="project-desc" data-i18n="p02_teaser">
+                    Packaging design for “MOLA”, a canned beverage inspired by Aperol.
+                  </p>
+                  <ul class="project-tags">
+                    <li>Illustrator</li><li>Photoshop</li><li>Branding</li>
+                  </ul>
+                </div>
+              </button>
+            </article>
+
+            <!-- P03 -->
+            <article class="project-card reveal" data-tags="editorial">
+              <button class="project-btn" type="button" data-project="p03">
+                <img class="project-img" src="./assets/images/projects/p03/cover.jpg" alt="Project 03 — Future Relics" loading="lazy" />
+                <div class="project-body">
+                  <h3 class="project-title">Project 03 — Editorial Design</h3>
+                  <p class="project-desc" data-i18n="p03_teaser">
+                    Exhibition inspired by Daniel Arsham reflecting on time and memory.
+                  </p>
+                  <ul class="project-tags">
+                    <li>InDesign</li><li>Production</li><li>System</li>
+                  </ul>
+                </div>
+              </button>
+            </article>
+
+            <!-- P04 -->
+            <article class="project-card reveal" data-tags="3d">
+              <button class="project-btn" type="button" data-project="p04">
+                <img class="project-img" src="./assets/images/projects/p04/cover.jpg" alt="Project 04 — 3D Interior" loading="lazy" />
+                <div class="project-body">
+                  <h3 class="project-title">Project 04 — 3D</h3>
+                  <p class="project-desc" data-i18n="p04_teaser">
+                    3D composition of a modern room with warm, harmonious pastel palette.
+                  </p>
+                  <ul class="project-tags">
+                    <li>Cinema 4D</li><li>Lighting</li><li>Materials</li>
+                  </ul>
+                </div>
+              </button>
+            </article>
+
+            <!-- P05 -->
+            <article class="project-card reveal" data-tags="ui">
+              <button class="project-btn" type="button" data-project="p05">
+                <img class="project-img" src="./assets/images/projects/p05/cover.jpg" alt="Project 05 — Nómada App" loading="lazy" />
+                <div class="project-body">
+                  <h3 class="project-title">Project 05 — Web / App Design</h3>
+                  <p class="project-desc" data-i18n="p05_teaser">
+                    Digital travel platform offering personalized experiences and unique adventures.
+                  </p>
+                  <ul class="project-tags">
+                    <li>Figma</li><li>UX/UI</li><li>Prototype</li>
+                  </ul>
+                </div>
+              </button>
+            </article>
+
+            <!-- P06 -->
+            <article class="project-card reveal" data-tags="editorial">
+              <button class="project-btn" type="button" data-project="p06">
+                <img class="project-img" src="./assets/images/projects/p06/cover.jpg" alt="Project 06 — Gaia Campaign" loading="lazy" />
+                <div class="project-body">
+                  <h3 class="project-title">Project 06 — Editorial Design</h3>
+                  <p class="project-desc" data-i18n="p06_teaser">
+                    “Gaia” campaign: minimalist organic visuals about nature, balance and sustainability.
+                  </p>
+                  <ul class="project-tags">
+                    <li>Procreate</li><li>Illustrator</li><li>Photoshop</li>
+                  </ul>
+                </div>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title reveal" data-i18n="skills_title">Skills</h2>
+            <p class="section-subtitle reveal" data-i18n="skills_subtitle">
+              Tools I use to craft visual systems and digital experiences.
+            </p>
+          </header>
+
+          <div class="skills-grid">
+            <div class="card reveal">
+              <h3>Adobe</h3>
+              <ul class="list">
+                <li>Photoshop</li>
+                <li>Illustrator</li>
+                <li>InDesign</li>
+                <li>Premiere</li>
+              </ul>
+            </div>
+
+            <div class="card reveal">
+              <h3>Design</h3>
+              <ul class="list">
+                <li>Figma</li>
+                <li>Branding & Visual Identity</li>
+                <li>Editorial systems</li>
+                <li>Layout / Composition</li>
+              </ul>
+            </div>
+
+            <div class="card reveal">
+              <h3>3D</h3>
+              <ul class="list">
+                <li>Cinema 4D</li>
+                <li>Lighting & materials</li>
+                <li>Scene composition</li>
+              </ul>
+            </div>
+
+            <div class="card reveal">
+              <h3 data-i18n="skills_soft_title">Approach</h3>
+              <ul class="list">
+                <li data-i18n="skills_soft_1">Minimal & refined aesthetics</li>
+                <li data-i18n="skills_soft_2">Organic shapes and calm palettes</li>
+                <li data-i18n="skills_soft_3">Clarity, balance, and intention</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title reveal" data-i18n="contact_title">Let’s work together</h2>
+            <p class="section-subtitle reveal" data-i18n="contact_subtitle">
+              Reach out for collaborations, internships, or freelance work.
+            </p>
+          </header>
+
+          <div class="contact-grid">
+            <div class="card reveal">
+              <h3 data-i18n="contact_details">Contact details</h3>
+              <ul class="contact-list">
+                <li>
+                  <span class="label">Email</span>
+                  <a href="mailto:paulinaabello04@icloud.com">paulinaabello04@icloud.com</a>
+                </li>
+                <li>
+                  <span class="label" data-i18n="phone">Phone</span>
+                  <a href="tel:+34666679294">+34 666 679 294</a>
+                </li>
+                <li>
+                  <span class="label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/paulina-abell%C3%B3-jimenez-41a9b22bb/" rel="noopener" target="_blank">
+                    Paulina Abelló Jimenez
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <form class="card reveal" id="contact-form" novalidate>
+              <h3 data-i18n="contact_form_title">Send a message</h3>
+
+              <div class="field">
+                <label for="name" data-i18n="form_name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="field">
+                <label for="email" data-i18n="form_email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="field">
+                <label for="message" data-i18n="form_message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+
+              <button class="btn primary" type="submit" data-i18n="form_submit">Send</button>
+              <p class="muted small" id="form-status" role="status" aria-live="polite"></p>
+
+              <p class="muted tiny" data-i18n="form_note">
+                This demo form does not send emails yet. Use Formspree or your backend later.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p class="small">
+            © <span id="year"></span> Paulina Abelló ·
+            <span data-i18n="footer_note">Built as a reusable portfolio template.</span>
+          </p>
+          <a class="small back-top" href="#top" data-i18n="back_top">Back to top</a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- MODAL -->
+<div class="modal" id="project-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header class="modal-head">
+      <h3 id="modal-title">Project</h3>
+      <button class="icon-btn" type="button" aria-label="Close" data-close-modal>✕</button>
+    </header>
+
+    <div class="modal-body">
+      <p class="muted small" id="modal-meta"></p>
+      <p id="modal-desc"></p>
+
+      <div class="case-study" aria-label="Case study">
+        <div class="case-item">
+          <h4 data-i18n="case_role">Rol</h4>
+          <p id="modal-role"></p>
+        </div>
+        <div class="case-item">
+          <h4 data-i18n="case_goal">Objetivo</h4>
+          <p id="modal-goal"></p>
+        </div>
+      </div>
+
+      <!-- ✅ galería que el JS rellena -->
+      <div class="modal-gallery" aria-label="Project gallery"></div>
+
+      <!-- ✅ lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__backdrop" type="button" data-close-lightbox aria-label="Close image"></button>
+        <figure class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+          <img id="lightbox-img" alt="" />
+        </figure>
+      </div>
+
+      <ul class="modal-tags" id="modal-tags" aria-label="Tools used"></ul>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
